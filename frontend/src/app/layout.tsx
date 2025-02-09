@@ -5,13 +5,15 @@ import { Lato, Merriweather } from "next/font/google";
 
 import "./globals.css";
 
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const latoSans = Lato({
   weight: ["300", "400", "700", "900"],
   variable: "--font-lato-sans",
   style: ["normal", "italic"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 const merriweatherSans = Merriweather({
@@ -19,6 +21,7 @@ const merriweatherSans = Merriweather({
   variable: "--font-merriweather-sans",
   style: ["normal", "italic"],
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -34,13 +37,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${latoSans.variable} ${merriweatherSans.variable} antialiased`}
+        className={`${latoSans.variable} ${merriweatherSans.variable} flex min-h-screen flex-col antialiased`}
       >
-        <header>
-          <Navbar />
-        </header>
+        <Header />
 
         {children}
+
+        <Footer />
       </body>
     </html>
   );

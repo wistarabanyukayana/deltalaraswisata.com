@@ -5,13 +5,16 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --font-lato-sans: var(--font-lato-sans);
+  --font-merriweather-sans: var(--font-merriweather-sans);
 }
 
 @layer base {
   :root {
-    --background: black;
-    //--background: 0 0% 100%;
-    //--foreground: 222.2 47.4% 11.2%;
+    //--background: black;
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
     --popover: 0 0% 100%;
@@ -73,7 +76,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Lato, Merriweather, sans-serif;
+  font-family: var(--font-lato-sans), sans-serif;
 }
 
 @layer base {
@@ -82,5 +85,26 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+nav {
+  transition:
+    background 0.3s ease,
+    padding 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+nav.scrolled {
+  @apply bg-opacity-95 fixed inset-x-0 bg-white shadow-md backdrop-blur-md;
+  animation: navSlideDown 0.3s ease;
+}
+
+@keyframes navSlideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
