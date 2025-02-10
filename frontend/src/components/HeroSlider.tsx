@@ -34,7 +34,7 @@ export default function HeroSlider() {
   ];
 
   return (
-    <section className="relative h-[70vh] w-full">
+    <section className="relative h-[90vh] w-full">
       <Carousel
         setApi={setApi}
         opts={{
@@ -55,7 +55,7 @@ export default function HeroSlider() {
           {slides.map((slide, index) => (
             <CarouselItem className="pl-0" key={index}>
               <div
-                className="flex h-[70vh] w-full items-center justify-center bg-cover bg-center"
+                className="flex h-[90vh] w-full items-center justify-center bg-cover bg-center"
                 style={{
                   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${slide.image})`,
                 }}

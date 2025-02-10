@@ -110,7 +110,7 @@ export default function Navbar() {
 
         <DisclosurePanel
           transition
-          className="h-screen origin-top bg-transparent transition duration-50 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0 lg:hidden"
+          className="h-screen origin-top bg-transparent transition duration-300 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0 lg:hidden"
         >
           <div className="absolute z-50 flex w-full flex-col gap-1 rounded-b-3xl border-b bg-zinc-50 px-2 pt-2 pb-3">
             {navigation.map((item) => (

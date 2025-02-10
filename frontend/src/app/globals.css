@@ -87,24 +87,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-nav {
-  transition:
-    background 0.3s ease,
-    padding 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-nav.scrolled {
-  @apply bg-opacity-95 fixed inset-x-0 bg-white shadow-md backdrop-blur-md;
-  animation: navSlideDown 0.3s ease;
-}
-
-@keyframes navSlideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
