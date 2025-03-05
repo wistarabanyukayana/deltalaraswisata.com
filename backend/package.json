@@ -1,6 +1,6 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
+  "name": "@deltalaraswisata.com/backend",
+  "version": "0.1.0",
   "description": "A Backend for Delta Laras Wisata Company Website",
   "keywords": [
     "delta",
@@ -30,6 +30,6 @@
     "url": "git+https://github.com/wistarabanyukayana/deltalaraswisata.com.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified for backend\" && exit 1"
   }
 }

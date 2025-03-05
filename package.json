@@ -1,6 +1,6 @@
 {
   "name": "deltalaraswisata.com",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A Website for Delta Laras Wisata Company",
   "keywords": [
     "delta",
@@ -33,7 +33,11 @@
     "backend"
   ],
   "scripts": {
-    "frontend": "npm run start --workspace=frontend",
+    "test": "echo \"Error: no test specified for deltalaraswisata.com\" && exit 1",
+    "webstart": "npm run start --workspace=frontend",
+    "webdev": "npm run dev --workspace=frontend",
+    "webbuild": "npm run build --workspace=frontend",
+    "weblint": "npm run lint --workspace=frontend",
     "backend": "npm run start --workspace=backend"
   }
 }
