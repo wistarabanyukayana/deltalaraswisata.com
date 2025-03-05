@@ -1,0 +1,35 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A Backend for Delta Laras Wisata Company Website",
+  "keywords": [
+    "delta",
+    "laras",
+    "wisata",
+    "travel",
+    "tourism",
+    "website",
+    "next.js",
+    "react",
+    "tailwind",
+    "corporate",
+    "business"
+  ],
+  "homepage": "https://github.com/wistarabanyukayana/deltalaraswisata.com#readme",
+  "bugs": {
+    "url": "https://github.com/wistarabanyukayana/deltalaraswisata.com/issues",
+    "email": "wisthara.banyu.kayana@gmail.com"
+  },
+  "license": "MIT",
+  "private": true,
+  "license-notes": "Custom trademark usage restrictions apply. See LICENSE file for full details.",
+  "author": "Wistara Banyu Kayana",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wistarabanyukayana/deltalaraswisata.com.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
