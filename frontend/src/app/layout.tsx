@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import { Inter, Source_Serif_4, JetBrains_Mono } from "next/font/google";
+
 import "./globals.css";
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Delta Laras Wisata",
@@ -73,6 +78,18 @@ export const metadata: Metadata = {
   manifest: "manifest.json",
 };
 
+const inter = Inter({
+  variable: "--font-inter",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+});
+
+const sourceSerif4 = Source_Serif_4({
+  variable: "--font-source-serif-4",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -80,7 +97,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body
+        className={`${inter.variable} ${jetBrainsMono.variable} ${sourceSerif4.variable} antialiased`}
+      >
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
