@@ -107,9 +107,9 @@ export default function Header() {
                       "relative block rounded-md px-3 py-2 text-base font-medium"
                     )}
                   >
-                    {item.href === pathname ? (
-                      <div className="absolute top-0 bottom-0 left-0 w-0.5 bg-red-600" />
-                    ) : null}
+                    {item.href === pathname && (
+                      <div className="absolute top-0 bottom-0 left-0 w-1 rounded-l-xl bg-red-600" />
+                    )}
 
                     {item.name}
                   </DisclosureButton>
