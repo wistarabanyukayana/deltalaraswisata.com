@@ -76,7 +76,7 @@ export default function Header() {
                             item.href === pathname
                               ? "text-red-600 underline decoration-3 underline-offset-15"
                               : "text-gray-800 transition-colors hover:text-red-600",
-                            "--font-lato rounded-md px-3 py-2 font-bold tracking-wide text-nowrap uppercase"
+                            "rounded-md p-2 font-semibold text-nowrap uppercase"
                           )}
                         >
                           {item.name}
