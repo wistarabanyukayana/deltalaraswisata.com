@@ -98,7 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetBrainsMono.variable} ${sourceSerif4.variable} antialiased`}
+        className={`${inter.variable} ${jetBrainsMono.variable} ${sourceSerif4.variable} min-h-screen min-w-screen antialiased`}
       >
         <Header />
         {children}

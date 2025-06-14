@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,8 +11,9 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Transition,
+  CloseButton,
 } from "@headlessui/react";
+
 import {
   Bars3Icon,
   MagnifyingGlassCircleIcon,
@@ -18,7 +21,6 @@ import {
 } from "@heroicons/react/24/outline";
 
 import navbarLogo from "@/assets/img/navbarLogo.png";
-import path from "path";
 
 const navigation = [
   { name: "Beranda", href: "/" },
@@ -36,8 +38,11 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header>
-      <Disclosure as="nav" className="rounded-b-xl bg-gray-100 md:rounded-none">
+    <header id="header">
+      <Disclosure
+        as="nav"
+        className="fixed top-0 w-full rounded-b-xl bg-gray-100 md:rounded-none"
+      >
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
@@ -116,6 +121,12 @@ export default function Header() {
                 ))}
               </div>
             </DisclosurePanel>
+            {open === true && (
+              <CloseButton
+                as="div"
+                className="relative top-0 z-[-1] min-h-screen min-w-screen origin-top rounded-b-xl bg-black/50 transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0 md:hidden"
+              />
+            )}
           </>
         )}
       </Disclosure>
